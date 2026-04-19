@@ -9,6 +9,15 @@
         android:allowBackup="false"
         android:label="Edge POC (Stock Test)">
 
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <service
             android:name=".watchdog.WatchdogService"
             android:exported="true"/>
@@ -16,6 +25,10 @@
         <service android:name=".scanner.ScannerService"
             android:process=":scanner"
             android:exported="false"/>
+
+        <service
+            android:name=".promotion.PromotionService"
+            android:exported="true"/>
 
     </application>
 

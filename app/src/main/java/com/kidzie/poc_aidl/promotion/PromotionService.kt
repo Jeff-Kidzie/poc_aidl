@@ -3,6 +3,7 @@ package com.kidzie.poc_aidl.promotion
 import android.app.Service
 import android.content.Intent
 import android.os.IBinder
+import com.kidzie.poc_aidl.IPromotionEngine
 
 class PromotionService : Service() {
 
@@ -21,7 +22,7 @@ class PromotionService : Service() {
         }
     }
 
-    override fun onBind(intent: Intent?): IBinder? = null
+    override fun onBind(intent: Intent?): IBinder = binder
 
     override fun onStartCommand(
         intent: Intent?,

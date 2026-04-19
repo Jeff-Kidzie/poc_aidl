@@ -64,7 +64,7 @@ class WatchdogService : Service() {
         watchDogScope.launch {
             while (isActive) {
                 Log.d("watchdog", "watchdog is live")
-                delay(1000L) // 1 second
+                delay(10000L) // 1 second
             }
 
         }
